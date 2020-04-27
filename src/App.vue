@@ -1,32 +1,84 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="header">
+      <h1 class="header__heading">
+        Notifications
+      </h1>
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  body {
+    margin: 0;
+  }
 
-#nav {
-  padding: 30px;
-}
+  #app {
+    font-family: "Roboto", sans-serif;;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .header {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #42b983;
+  }
+
+  .header__heading {
+    margin: 0;
+    text-align: center;
+  }
+
+  .confirm-form__container {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(128, 128, 128, 0.3);
+    z-index: 2;
+  }
+
+  .confirm-form {
+    margin: auto auto;
+    width: 300px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #42b983;
+    border-radius: 7px;
+    z-index: 3;
+  }
+
+  .confirm-form__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  .confirm-form__button {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    background-color: #555657;
+    border-radius: 4px;
+    border: 1px solid #555657;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.2s;
+  }
+
+  .confirm-form__button:hover {
+    background-color: #636566;
+  }
 </style>
